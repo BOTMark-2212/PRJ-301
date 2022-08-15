@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  * @author BOT
  */
 public class DBContext {
-    protected Connection connection;
+    public Connection connection;
     public DBContext()
     {
         try {

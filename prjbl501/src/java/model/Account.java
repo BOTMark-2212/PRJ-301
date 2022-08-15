@@ -15,6 +15,14 @@ public class Account {
     private String password;
     private ArrayList<Group> groups;
 
+    public Account() {
+    }
+
+    public Account(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     public ArrayList<Group> getGroups() {
         return groups;
     }

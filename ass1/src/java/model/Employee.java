@@ -13,16 +13,22 @@ public class Employee {
     private String name;
     private int salary_level_id;
     private String password;
-    private int posotion_id;
+    private String posotion_name;
 
     public Employee() {
     }
 
-    public Employee(String employee_id, String name, int salary_level_id) {
+    public Employee(String employee_id, String name, int salary_level_id, String password, String posotion_name) {
         this.employee_id = employee_id;
         this.name = name;
         this.salary_level_id = salary_level_id;
+        this.password = password;
+        this.posotion_name = posotion_name;
     }
+
+    
+
+    
 
     public String getEmployee_id() {
         return employee_id;
@@ -56,13 +62,15 @@ public class Employee {
         this.password = password;
     }
 
-    public int getPosotion_id() {
-        return posotion_id;
+    public String getPosotion_name() {
+        return posotion_name;
     }
 
-    public void setPosotion_id(int posotion_id) {
-        this.posotion_id = posotion_id;
+    public void setPosotion_name(String posotion_name) {
+        this.posotion_name = posotion_name;
     }
+
+    
     
     
 }

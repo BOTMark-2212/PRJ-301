@@ -18,10 +18,10 @@ import model.TimeSheet;
  *
  * @author BOT
  */
-public class TimSheetDBContext {
-    Connection connection;
-    PreparedStatement ps;
-    ResultSet rs;
+public class TimeSheetDBContext {
+    public Connection connection;
+    public PreparedStatement ps;
+    public ResultSet rs;
     public List<TimeSheet> getTimeSheet(){
         try {
             String query = "Select Employee.employee_name, TimeSheet.employee_id, salary_level_id, TimeSheet.date, TimeSheet.shift_id, TimeSheet.working_status_id from Employee\n" +
@@ -39,9 +39,8 @@ public class TimSheetDBContext {
             }
             return lTimeSheet;
         } catch (SQLException ex) {
-            Logger.getLogger(TimSheetDBContext.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TimeSheetDBContext.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
-    
     }
 }

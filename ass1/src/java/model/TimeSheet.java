@@ -21,14 +21,24 @@ public class TimeSheet {
     public TimeSheet() {
     }
 
-    public TimeSheet(String employee_name, String employee_id, Date date, int shift_id, int working_status_id) {
+    public TimeSheet(String employee_name, String employee_id, int salary_level_id, Date date, int shift_id, int working_status_id) {
         this.employee_name = employee_name;
         this.employee_id = employee_id;
+        this.salary_level_id = salary_level_id;
         this.date = date;
         this.shift_id = shift_id;
         this.working_status_id = working_status_id;
     }
 
+    public int getSalary_level_id() {
+        return salary_level_id;
+    }
+
+    public void setSalary_level_id(int salary_level_id) {
+        this.salary_level_id = salary_level_id;
+    }
+
+    
     public String getEmployee_name() {
         return employee_name;
     }
@@ -69,5 +79,11 @@ public class TimeSheet {
         this.working_status_id = working_status_id;
     }
 
+    @Override
+    public String toString() {
+        return "TimeSheet{" + "employee_name=" + employee_name + ", employee_id=" + employee_id + ", salary_level_id=" + salary_level_id + ", date=" + date + ", shift_id=" + shift_id + ", working_status_id=" + working_status_id + '}';
+    }
+
+    
     
 }

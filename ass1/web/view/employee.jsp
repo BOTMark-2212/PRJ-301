@@ -13,9 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="employee" method="POST">
-            <select name="opiton">
-                <option>Thong tin cong nhan</option>
+        <form action="employee" method="post">
                 <table border="1">
                     <thead>
                         <tr>
@@ -26,7 +24,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach items="${requestScope.listEmployee}" var="e">
+                        <c:forEach items="${listEmployee}" var="e">
                             <tr>
                                 <td>${e.employee_id}</td>
                                 <td>${e.name}</td>
@@ -37,8 +35,6 @@
                     </tbody>
                 </table>
 
-                <option>Bang cham cong</option>
-            </select>
         </form>
     </body>
 </html>

@@ -70,6 +70,11 @@ public class Employee {
         this.posotion_name = posotion_name;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" + "employee_id=" + employee_id + ", name=" + name + ", salary_level_id=" + salary_level_id + ", password=" + password + ", posotion_name=" + posotion_name + '}';
+    }
+
     
     
     

@@ -42,7 +42,6 @@ public class EmployeeManager extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         List<Employee> listEmployee = new EmployeeDBContext().getListEmployee();
-        listEmployee.add(new Employee("10", "name", 1, "10", "cong nhan"));
         request.setAttribute("listEmployee", listEmployee);
         request.getRequestDispatcher("view/employee.jsp").forward(request, response);
     }

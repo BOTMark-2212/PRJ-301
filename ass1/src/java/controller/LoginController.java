@@ -37,8 +37,8 @@ public class LoginController extends HttpServlet {
             String password = request.getParameter("password");
             EmployeeDBContext eDBC = new EmployeeDBContext();
             
-            if(eDBC.login(username, password)){
-                request.getRequestDispatcher("view/employee.jsp").forward(request, response);
+            if(eDBC.login(username, password)){ 
+                response.sendRedirect("view/employee.jsp");
             }else{
                 request.setAttribute("username", username);
                 request.setAttribute("password", password);

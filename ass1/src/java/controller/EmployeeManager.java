@@ -42,8 +42,10 @@ public class EmployeeManager extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         List<Employee> listEmployee = new EmployeeDBContext().getListEmployee();
-        request.setAttribute("listEmployee", listEmployee);
-        request.getRequestDispatcher("view/employee.jsp").forward(request, response);
+        String e = listEmployee.get(0).toString();
+        request.setAttribute("e", "abc");
+        
+        request.getRequestDispatcher("view/TimeSheet.jsp").forward(request, response);
     }
 
     /**
@@ -57,7 +59,7 @@ public class EmployeeManager extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        request.getRequestDispatcher("view/TimeSheet.jsp").forward(request, response);
     }
 
     /**

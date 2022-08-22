@@ -66,7 +66,7 @@ public class EmployeeDBContext {
     }
     public static void main(String[] args) {
         List<Employee> e = new EmployeeDBContext().getListEmployee();
-        System.out.println(e.get(1).toString());
+        System.out.println(e.get(0).toString());
     }
    
 }

@@ -42,8 +42,7 @@ public class EmployeeManager extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         List<Employee> listEmployee = new EmployeeDBContext().getListEmployee();
-        String e = listEmployee.get(0).toString();
-        request.setAttribute("e", "abc");
+        request.setAttribute("listEmployee", listEmployee);
         
         request.getRequestDispatcher("view/TimeSheet.jsp").forward(request, response);
     }
